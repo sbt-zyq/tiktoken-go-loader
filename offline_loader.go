@@ -28,7 +28,7 @@ func (l *OfflineLoader) LoadTiktokenBpe(tiktokenBpeFile string) (map[string]int,
 		if err != nil {
 			return nil, err
 		}
-		rank, err := strconv.Atoi(parts[1])
+		rank, err := strconv.Atoi(strings.TrimSpace(parts[1]))
 		if err != nil {
 			return nil, err
 		}
